@@ -1,4 +1,6 @@
 <?php
+// Afficher les erreurs à l'écran
+ini_set('display_errors', 1);
 $articleNom = ['stylo','ecran','lampe'];
 $articleprix = [2,630,56];
 $articleprix = ["https://www.google.fr/imgres?imgurl=https%3A%2F%2Fwww.rvdgallery.be%2Fmedias%2Fimages%2Fimg-0579-2.jpg&imgrefurl=https%3A%2F%2Fwww.rvdgallery.be%2Fboutique%2Flampes-a-poser-table-lamps%2Flampe-a-poser-a-double-coupole-stilnovo-1950-italy.html&docid=hpiUbbv-PruWsM&tbnid=RHj8g2cTJLf6XM%3A&vet=10ahUKEwiugrTV4ZfgAhUMz4UKHd_XCe4QMwh2KAEwAQ..i&w=1920&h=1920&bih=884&biw=1920&q=lampe%20img&ved=0ahUKEwiugrTV4ZfgAhUMz4UKHd_XCe4QMwh2KAEwAQ&iact=mrc&uact=8",

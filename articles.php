@@ -1,5 +1,5 @@
 <?php
-$articleNom = ["l'écran ! ","la lampe !","les chaussures !","Chaussure"];
+/*$articleNom = ["l'écran ! ","la lampe !","les chaussures !","Chaussure"];
 $articleprix = [599,15.99,75,90];
 $articleUrl = ['assets/ecran.jpg','assets/lampe.png','assets/shoes.jpg','assets/shoes.jpg'];
 $articleDesc = ["17-inch Dell TFT LCD Moniteur ÀÉcran Plat",
@@ -7,6 +7,15 @@ $articleDesc = ["17-inch Dell TFT LCD Moniteur ÀÉcran Plat",
                 "Modèle emblématique du défilé Printemps-Été 2018",
                 "Modèle emblématique du défilé Printemps-Été 2017"
               ];
+*/
+              $articles = array(
+                1 => array('nom' => "l'écran ! ", 'prix' => 599, 'url' => 'assets/ecran.jpg', 'desc'=>"17-inch Dell TFT LCD Moniteur ÀÉcran Plat"),
+                2 => array('nom' => "Lampe", 'prix' => 15, 'url' => 'assets/lampe.png','desc'=>"Lampe à poser en métal vert cèdre h21cm"),
+                3 => array('nom' => "La chaussure !  ", 'prix' => 75, 'url' => 'assets/shoes.jpg','desc'=>"Modèle emblématique du défilé Printemps-Été 2018"),
+                4 => array ('nom' => "Chaussure ", 'prix' => 90, 'url' => 'assets/shoes.jpg','desc'=>"Modèle emblématique du défilé Printemps-Été 2017")
+                 );
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -14,7 +23,7 @@ $articleDesc = ["17-inch Dell TFT LCD Moniteur ÀÉcran Plat",
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Boutique en Ligne</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
@@ -53,28 +62,31 @@ $articleDesc = ["17-inch Dell TFT LCD Moniteur ÀÉcran Plat",
             </div>
             <div class="row">
                 <?php  
-           // var_dump(count($articleUrl));
-            for($i = 0 ; $i < count($articleUrl) ; $i++  ) {
-             ?>
-                <div class="col-sm-12 col-lg-6">
+           
+           foreach ($articles as $key => $value) {
+            //var_dump($value);
+            ?>
+              <div class="col-sm-12 col-lg-6">
                     <div class="card">
-                    <div class="card-header d-flex justify-content-center bg-white">
-                    <img src="<?php  echo $articleUrl[$i];  ?>" class="art-img img-fluid card-img-top" alt="...">
-                    </div>
-                    
+                        <div class="card-header d-flex justify-content-center bg-white">
+                            <img src="<?php  echo $value['url'];  ?>" class="art-img img-fluid card-img-top" alt="...">
+                        </div>
+
                         <div class="card-body">
-                            <h5 class="card-title"><?= $articleNom[$i] ?></h5>
-                            <p class="card-text"><?=  $articleDesc[$i] ?></p>
+                            <h5 class="card-title"><?= $value['nom'] ?></h5>
+                            <p class="card-text"><?=  $value['desc'] ?></p>
                             <div class="card-footer d-flex justify-content-center bg-white">
-                            <a href="#" class="btn btn-primary"><?= $articleprix[$i] . " Euros" ?></a>
+                                <a href="#" class="btn btn-primary"><?= $value['prix'] . " Euros" ?></a>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
-                <?php     
-            }
-        ?>
+            <?php    
+           }
+           ?>
+
+
             </div>
 
 
