@@ -1,6 +1,6 @@
 <?php
 $articleNom = ["l'écran ! ","la lampe !","les chaussures !","Chaussure"];
-$articleprix = [599,15.99,75,80];
+$articleprix = [599,15.99,75,90];
 $articleUrl = ['assets/ecran.jpg','assets/lampe.png','assets/shoes.jpg','assets/shoes.jpg'];
 $articleDesc = ["17-inch Dell TFT LCD Moniteur ÀÉcran Plat",
                 "Lampe à poser en métal vert cèdre h21cm",
