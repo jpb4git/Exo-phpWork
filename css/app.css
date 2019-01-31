@@ -1,3 +1,19 @@
+body{
+
+    background-color: rgb(233, 233, 233);
+}
+.row{
+    background-color: rgb(246, 246, 246);
+}
+.bandeau{
+    background-image: url("https://www.nginx.com/wp-content/uploads/2019/01/nginx.com-homepage-Controller-2019Q1-bg-1366x600-min.jpg"); 
+    min-height:30em; 
+    
+}
+
+
+
+
 .art-img{
 width : 50%;
 height : 50%;

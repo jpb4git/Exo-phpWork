@@ -8,11 +8,25 @@ $articleDesc = ["17-inch Dell TFT LCD Moniteur ÀÉcran Plat",
                 "Modèle emblématique du défilé Printemps-Été 2017"
               ];
 */
+include 'functions/useful.php';
+
               $articles = array(
-                1 => array('nom' => "l'écran ! ", 'prix' => 599, 'url' => 'assets/ecran.jpg', 'desc'=>"17-inch Dell TFT LCD Moniteur ÀÉcran Plat"),
-                2 => array('nom' => "Lampe", 'prix' => 15, 'url' => 'assets/lampe.png','desc'=>"Lampe à poser en métal vert cèdre h21cm"),
-                3 => array('nom' => "La chaussure !  ", 'prix' => 75, 'url' => 'assets/shoes.jpg','desc'=>"Modèle emblématique du défilé Printemps-Été 2018"),
-                4 => array ('nom' => "Chaussure ", 'prix' => 90, 'url' => 'assets/shoes.jpg','desc'=>"Modèle emblématique du défilé Printemps-Été 2017")
+                1 => array('nom' => 'l\'écran !',
+                           'prix' => 599,
+                           'url' => 'assets/ecran.jpg',
+                           'desc'=>'17-inch Dell TFT LCD Moniteur ÀÉcran Plat'),
+                2 => array('nom' => "Lampe",
+                           'prix' => 15,
+                           'url' => 'assets/lampe.png',
+                           'desc'=>"Lampe à poser en métal vert cèdre h21cm"),
+                3 => array('nom' => "La chaussure !  ",
+                           'prix' => 75,
+                           'url' => 'assets/shoes.jpg',
+                           'desc'=>"Modèle emblématique du défilé Printemps-Été 2018"),
+                4 => array ('nom' => "Chaussure ",
+                            'prix' => 90,
+                            'url' => 'assets/shoes.jpg',
+                            'desc'=>"Modèle emblématique du défilé Printemps-Été 2017")
                  );
 
 
@@ -34,7 +48,7 @@ $articleDesc = ["17-inch Dell TFT LCD Moniteur ÀÉcran Plat",
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">EXERCICE 1 </a>
+            <a class="navbar-brand" href="#">NgShop</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -63,8 +77,8 @@ $articleDesc = ["17-inch Dell TFT LCD Moniteur ÀÉcran Plat",
             <div class="row">
                 <?php  
            
-           foreach ($articles as $key => $value) {
-            //var_dump($value);
+           foreach ($articles as  $value) {
+           
             ?>
               <div class="col-sm-12 col-lg-6">
                     <div class="card">
@@ -76,7 +90,7 @@ $articleDesc = ["17-inch Dell TFT LCD Moniteur ÀÉcran Plat",
                             <h5 class="card-title"><?= $value['nom'] ?></h5>
                             <p class="card-text"><?=  $value['desc'] ?></p>
                             <div class="card-footer d-flex justify-content-center bg-white">
-                                <a href="#" class="btn btn-primary"><?= $value['prix'] . " Euros" ?></a>
+                                <a href="#" class="btn btn-primary"><?= $value['prix'] ."  " . MajDevise("euros") ?></a>
                             </div>
 
                         </div>
