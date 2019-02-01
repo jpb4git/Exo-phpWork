@@ -59,19 +59,22 @@
                   </h3>
               </div>
                 <div class="col-sm-12">
-                    <ul class="ul-features">
-                    <li class="">
+                    <ul class="ul-features d-flex justify-content-center ">
+                    <li class="ml-5 mr-5">
                       <img class="svg-icon" src="assets/icon-Cloud-green.svg" alt="">
                     </li>
-                      <li>
+                      <li class="ml-5 mr-5">
                           <img class="svg-icon" src="assets/icon-Load-Balancing-green.svg" alt="">
                       </li>
-                      <li>
+                      <li class="ml-5 mr-5">
                           <img class="svg-icon" src="assets/icon-Microservices-green.svg" alt="">
                       </li>
-                      <li>
+                      <li class="ml-5 mr-5">
                           <img class="svg-icon" src="assets/icon-Security-green.svg" alt="">
                       </li>
+                        <li class="ml-5 mr-5">
+                            <img class="svg-icon" src="assets/icon-Web-and-Mobile-Applications-green.svg" alt="">
+                        </li>
                 </ul>
                 </div>
             </div>
