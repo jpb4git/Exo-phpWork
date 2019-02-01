@@ -43,3 +43,16 @@ min-height: 17em;
     width: 150px;
     height : 150px;
 }
+.green-bottom-line{
+
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: darkgreen;
+}
+.img-head{
+    width: 10em;
+    height: 8em;
+}
+.infoBtn{
+    width: 300px;
+}
