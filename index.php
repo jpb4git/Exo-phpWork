@@ -54,26 +54,36 @@
             </div>
             <div class="row">
               <div class="col-sm-12">
-                  <h3 class="text-center mt-5">
+                  <h3 class="text-center mt-5 mb-5">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   </h3>
               </div>
                 <div class="col-sm-12">
                     <ul class="ul-features d-flex justify-content-center ">
-                    <li class="ml-5 mr-5">
+                    <li class="ml-5 mr-5 text-center">
+
                       <img class="svg-icon" src="assets/icon-Cloud-green.svg" alt="">
+                        <h5>lorem</h5>
                     </li>
-                      <li class="ml-5 mr-5">
+                      <li class="ml-5 mr-5 text-center">
+
                           <img class="svg-icon" src="assets/icon-Load-Balancing-green.svg" alt="">
+                          <h5>lorem</h5>
                       </li>
-                      <li class="ml-5 mr-5">
+                      <li class="ml-5 mr-5 text-center">
+
                           <img class="svg-icon" src="assets/icon-Microservices-green.svg" alt="">
+                          <h5>lorem</h5>
                       </li>
-                      <li class="ml-5 mr-5">
+                      <li class="ml-5 mr-5 text-center">
+
                           <img class="svg-icon" src="assets/icon-Security-green.svg" alt="">
+                          <h5>lorem</h5>
                       </li>
-                        <li class="ml-5 mr-5">
+                        <li class="ml-5 mr-5 text-center">
+
                             <img class="svg-icon" src="assets/icon-Web-and-Mobile-Applications-green.svg" alt="">
+                            <h5>lorem</h5>
                         </li>
                 </ul>
                 </div>
