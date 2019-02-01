@@ -11,7 +11,16 @@ body{
     
 }
 
-
+.ul-features{
+    list-style-type: none!important;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    //background-color: #333333;
+}
+li{
+    float: left;
+}
 
 
 .art-img{
@@ -28,4 +37,9 @@ height : 50%;
 .card-header{
 min-height: 17em;
 
+}
+
+.svg-icon{
+    width: 150px;
+    height : 150px;
 }

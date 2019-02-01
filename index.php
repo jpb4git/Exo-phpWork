@@ -53,11 +53,27 @@
                 </div>
             </div>
             <div class="row">
-              <div class="col-sm-12"><h3 class="text-center mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3></div>
-              <div class="col-lg-3"></div>
-              <div class="col-lg-3"></div>
-              <div class="col-lg-3"></div>
-              <div class="col-lg-3"></div>
+              <div class="col-sm-12">
+                  <h3 class="text-center mt-5">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h3>
+              </div>
+                <div class="col-sm-12">
+                    <ul class="ul-features">
+                    <li class="">
+                      <img class="svg-icon" src="assets/icon-Cloud-green.svg" alt="">
+                    </li>
+                      <li>
+                          <img class="svg-icon" src="assets/icon-Load-Balancing-green.svg" alt="">
+                      </li>
+                      <li>
+                          <img class="svg-icon" src="assets/icon-Microservices-green.svg" alt="">
+                      </li>
+                      <li>
+                          <img class="svg-icon" src="assets/icon-Security-green.svg" alt="">
+                      </li>
+                </ul>
+                </div>
             </div>
         </div>
     </main>
