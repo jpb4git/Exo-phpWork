@@ -53,7 +53,7 @@ $articles = generateCatalogue();
 
 
         <div class="row">
-            <h1 class="ml-5">Articles</h1>
+            <h1 class="badge badge-success w-100 p-3 m-3">Articles</h1>
         </div>
         <div class="row">
             <?php

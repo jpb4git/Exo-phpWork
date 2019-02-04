@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../article.php" beforeDir="false" afterPath="$PROJECT_DIR$/../article.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../catalogue.php" beforeDir="false" afterPath="$PROJECT_DIR$/../catalogue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../functions/useful.php" beforeDir="false" afterPath="$PROJECT_DIR$/../functions/useful.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../catalogue.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-176">
-              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            <state relative-caret-position="858">
+              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" />
                 <element signature="n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
@@ -41,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../article.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="91" column="74" lean-forward="true" selection-start-line="91" selection-start-column="74" selection-end-line="91" selection-end-column="74" />
+            <state relative-caret-position="308">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -50,12 +49,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../functions/useful.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
-              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="594">
+              <caret line="30" column="151" selection-start-line="30" selection-start-column="151" selection-end-line="30" selection-end-column="151" />
               <folding>
                 <element signature="n#MajDevise#0;n#!!top" />
-                <element signature="n#getArticleInfo#0;n#!!top" />
+                <element signature="n#generateCatalogue#0;n#!!top" />
                 <element signature="n#getCommentaires#0;n#!!top" />
+                <element signature="n#isExistArticle#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -89,10 +89,10 @@
         <option value="$PROJECT_DIR$/../header.php" />
         <option value="$PROJECT_DIR$/../articles.php" />
         <option value="$PROJECT_DIR$/../index.php" />
-        <option value="$PROJECT_DIR$/../functions/useful.php" />
         <option value="$PROJECT_DIR$/../css/app.css" />
-        <option value="$PROJECT_DIR$/../article.php" />
         <option value="$PROJECT_DIR$/../catalogue.php" />
+        <option value="$PROJECT_DIR$/../article.php" />
+        <option value="$PROJECT_DIR$/../functions/useful.php" />
       </list>
     </option>
   </component>
@@ -113,6 +113,11 @@
             <path>
               <item name="." type="b2602c69:ProjectViewProjectNode" />
               <item name="mySite" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
+              <item name="mySite" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="." type="b2602c69:ProjectViewProjectNode" />
@@ -162,7 +167,7 @@
       <workItem from="1549028794828" duration="5000" />
       <workItem from="1549267360999" duration="4655000" />
       <workItem from="1549272977074" duration="5605000" />
-      <workItem from="1549281457487" duration="4703000" />
+      <workItem from="1549281457487" duration="9159000" />
     </task>
     <task id="LOCAL-00001" summary="ajout titre sous icons">
       <created>1549024259597</created>
@@ -182,7 +187,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23204000" />
+    <option name="totallyTimeSpent" value="27660000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -274,8 +279,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../catalogue.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-176">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state relative-caret-position="858">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" />
             <element signature="n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
@@ -285,20 +290,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../functions/useful.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="594">
+          <caret line="30" column="151" selection-start-line="30" selection-start-column="151" selection-end-line="30" selection-end-column="151" />
           <folding>
             <element signature="n#MajDevise#0;n#!!top" />
-            <element signature="n#getArticleInfo#0;n#!!top" />
+            <element signature="n#generateCatalogue#0;n#!!top" />
             <element signature="n#getCommentaires#0;n#!!top" />
+            <element signature="n#isExistArticle#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="91" column="74" lean-forward="true" selection-start-line="91" selection-start-column="74" selection-end-line="91" selection-end-column="74" />
+        <state relative-caret-position="308">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>

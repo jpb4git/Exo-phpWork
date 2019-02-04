@@ -19,13 +19,18 @@ function getArticleInfo($id)
 {
     $art1 = [];
     $articles = generateCatalogue();
-    for ($i = 0; $i < count($articles); $i++) {
-        // si nous sommes sur l'article traité
-        if ($articles[$i]['id'] == $id) {
-            $arr1 = array('id' => $articles[$i]['id'], 'nom' => $articles[$i]['nom'], 'prix' => $articles[$i]['prix'],'descFull' => $articles[$i]['descFull'], 'desc' => $articles[$i]['desc'], 'url' => $articles[$i]['url']);
+    if (isExistArticle($id)) {
+        for ($i = 0; $i < count($articles); $i++) {
+            // si nous sommes sur l'article traité
+            if ($articles[$i]['id'] == $id) {
+                $arr1 = array('id' => $articles[$i]['id'], 'nom' => $articles[$i]['nom'], 'prix' => $articles[$i]['prix'], 'descFull' => $articles[$i]['descFull'], 'desc' => $articles[$i]['desc'], 'url' => $articles[$i]['url']);
+            }
         }
 
+    } else {
+        $arr1 = array('id' => "0", 'nom' => "article inconnu", 'prix' => '', 'descFull' => "il semble que vous tentez de visualiser un article inconnu." , 'desc' => 'Article inconnu', 'url' => 'assets/notFound.svg');
     }
+
     return $arr1;
 
 }
@@ -85,7 +90,7 @@ function getCommentaires()
             'name' => "myrthe",
             'url_avatar' => "assets/avatar1.png",
             'commentaire' => 'super produit 1!!! ',
-            'stars' => '1'
+            'stars' => '0'
         ),
         2 => array(
             'id' => "1",
@@ -120,4 +125,23 @@ function getCommentaires()
     );
 
     return $com;
+}
+
+/**
+ *
+ * @param $id   id de l'aticle
+ * @return bool retourne si existant dans la base ou non
+ */
+function isExistArticle($id)
+{
+    $articles = generateCatalogue();
+    for ($i = 0; $i < count($articles); $i++) {
+        // si nous sommes sur l'article traité
+        if ($articles[$i]['id'] == $id) {
+            return true;
+        }
+
+    }
+    return false;
+
 }

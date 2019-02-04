@@ -60,7 +60,7 @@ $commentaires = getCommentaires();
 
 
         <div class="row">
-            <h1 class="ml-5 mt-5"><?= $art['nom'] ?></h1>
+            <h1 class="p-3 mt-3 mb-3 mr-1 ml-1 badge badge-success w-100"><?= $art['nom'] ?></span></h1>
         </div>
         <div class="row">
 
@@ -95,9 +95,16 @@ $commentaires = getCommentaires();
                                         <div class="col-md-3">
                                             <span>
                                          <?php
-                                         for ($i = 0; $i < intval($value['stars']); $i++) { ?>
-                                             <i class="material-icons text-success">star</i>
-                                             <?php
+                                         for ($i = 0; $i < 5; $i++) {
+
+                                             if (intval($value['stars']) >= $i) {
+                                                 ?>
+                                                 <i class="material-icons text-success">star</i>
+                                                 <?php
+                                             } else { ?>
+                                                 <i class="material-icons text-success">star_border</i>
+                                                 <?php
+                                             }
                                          }
 
                                          ?>
