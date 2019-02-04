@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b6bf236-de44-471c-9fc7-218d8f86d185" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/../catalogue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article.php" beforeDir="false" afterPath="$PROJECT_DIR$/../article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../catalogue.php" beforeDir="false" afterPath="$PROJECT_DIR$/../catalogue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../functions/useful.php" beforeDir="false" afterPath="$PROJECT_DIR$/../functions/useful.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11">
-              <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+            <state relative-caret-position="-220">
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -28,30 +28,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../catalogue.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="35" column="74" selection-start-line="35" selection-start-column="74" selection-end-line="35" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../article.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-627">
-              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+            <state relative-caret-position="-176">
+              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+              <folding>
+                <element signature="n#head#0;n#html#0;n#!!top" />
+                <element signature="n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../article.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="91" column="74" lean-forward="true" selection-start-line="91" selection-start-column="74" selection-end-line="91" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../functions/useful.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="1188">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="n#MajDevise#0;n#!!top" />
                 <element signature="n#getArticleInfo#0;n#!!top" />
-                <element signature="n#generateCatalogue#0;n#!!top" />
                 <element signature="n#getCommentaires#0;n#!!top" />
               </folding>
             </state>
@@ -61,26 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="39" column="1" lean-forward="true" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="7" selection-start-column="7" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+            <state relative-caret-position="594">
+              <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -103,10 +88,11 @@
         <option value="$PROJECT_DIR$/css/app.css" />
         <option value="$PROJECT_DIR$/../header.php" />
         <option value="$PROJECT_DIR$/../articles.php" />
-        <option value="$PROJECT_DIR$/../catalogue.php" />
         <option value="$PROJECT_DIR$/../index.php" />
-        <option value="$PROJECT_DIR$/../article.php" />
         <option value="$PROJECT_DIR$/../functions/useful.php" />
+        <option value="$PROJECT_DIR$/../css/app.css" />
+        <option value="$PROJECT_DIR$/../article.php" />
+        <option value="$PROJECT_DIR$/../catalogue.php" />
       </list>
     </option>
   </component>
@@ -176,6 +162,7 @@
       <workItem from="1549028794828" duration="5000" />
       <workItem from="1549267360999" duration="4655000" />
       <workItem from="1549272977074" duration="5605000" />
+      <workItem from="1549281457487" duration="4703000" />
     </task>
     <task id="LOCAL-00001" summary="ajout titre sous icons">
       <created>1549024259597</created>
@@ -195,7 +182,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18501000" />
+    <option name="totallyTimeSpent" value="23204000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -210,7 +197,7 @@
     <frame x="0" y="27" width="1920" height="988" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14914162" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15128756" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -222,7 +209,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3292232" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.067307696" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.067307696" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.19471154" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32932693" />
@@ -264,13 +251,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="39" column="1" lean-forward="true" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -278,37 +258,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../catalogue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="35" column="74" selection-start-line="35" selection-start-column="74" selection-end-line="35" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        <state relative-caret-position="-220">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../article.php">
+    <entry file="file://$PROJECT_DIR$/../css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-627">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        <state relative-caret-position="594">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../catalogue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-176">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../functions/useful.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="1188">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="n#MajDevise#0;n#!!top" />
             <element signature="n#getArticleInfo#0;n#!!top" />
-            <element signature="n#generateCatalogue#0;n#!!top" />
             <element signature="n#getCommentaires#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="91" column="74" lean-forward="true" selection-start-line="91" selection-start-column="74" selection-end-line="91" selection-end-column="74" />
         </state>
       </provider>
     </entry>

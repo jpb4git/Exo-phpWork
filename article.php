@@ -1,14 +1,14 @@
 <?php
 include 'functions/useful.php';
 
+//recupération du catalogue
 $articles = generateCatalogue();
 
 if (isset($_GET) && !empty($_GET['id'])) {
-
     $art = getArticleInfo($_GET['id']);
-
 }
 
+//recuperation des commentaires
 $commentaires = getCommentaires();
 
 ?>
@@ -60,35 +60,49 @@ $commentaires = getCommentaires();
 
 
         <div class="row">
-            <h1 class="ml-5 mt-5"><?= $art[1] ?></h1>
+            <h1 class="ml-5 mt-5"><?= $art['nom'] ?></h1>
         </div>
         <div class="row">
 
             <div class="col-sm-12 ">
                 <div class="card">
                     <div class="card-header d-flex justify-content-center bg-white">
-                        <img src="<?php echo $art[4]; ?>" class="art-img img-fluid card-img-top" alt="...">
+                        <img src="<?php echo $art['url']; ?>" class="art-img img-fluid card-img-top" alt="...">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title"><?= $art[1] ?></h5>
-                        <p class="card-text"><?= $art[3] ?></p>
+                        <h5 class="card-title"><?= $art['nom'] ?></h5>
+                        <p class="card-text"><?= $art['desc'] ?></p>
+                        <p class="card-text"><?= $art['descFull'] ?></p>
                         <p class="bg-secondary rounded p-3 text-white text-center">
-                            <?= $art[2] ?> Euros
+                            <?= $art['prix'] ?> Euros
                         </p>
                         <div class="card-footer d-flex justify-content-center bg-white">
                             <div class="col-sm-12 d-flex justify-content-center">
                             </div>
                         </div>
-                        <div class="col-sm-12 d-flex justify-content-center mb-5">
+                        <div class="col-sm-12 d-flex justify-content-center mb-5 rounded">
                             <div class="row  mb-5 p-3">
                                 <?php
+                                //lister les commentaires pour cet article
                                 foreach ($commentaires as $value) {
-                                    if ($value['id'] == $art[0]) {
+                                    if ($value['id'] == $art['id']) {
                                         ?>
-                                        <div class="col-md-2 mb-3"><img class=" w-25"
-                                                                        src="<?php echo $value['url_avatar'] ?>" alt="">
+                                        <div class="col-md-2 mb-3">
+                                            <img class=" w-25" src="<?php echo $value['url_avatar'] ?>" alt="">
+                                            <span class="ml-1 text-success"><?php echo $value['name'] ?></span>
                                         </div>
-                                        <div class="col-md-10 mb-3"><?php echo $value['commentaire'] ?></div>
+                                        <div class="col-md-7 mb-3"><?php echo $value['commentaire'] ?></div>
+                                        <div class="col-md-3">
+                                            <span>
+                                         <?php
+                                         for ($i = 0; $i < intval($value['stars']); $i++) { ?>
+                                             <i class="material-icons text-success">star</i>
+                                             <?php
+                                         }
+
+                                         ?>
+                                          </span>
+                                        </div>
                                         <?php
                                     }
                                 }
