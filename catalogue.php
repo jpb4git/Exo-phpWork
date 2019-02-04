@@ -1,33 +1,7 @@
 <?php
-/*$articleNom = ["l'écran ! ","la lampe !","les chaussures !","Chaussure"];
-$articleprix = [599,15.99,75,90];
-$articleUrl = ['assets/ecran.jpg','assets/lampe.png','assets/shoes.jpg','assets/shoes.jpg'];
-$articleDesc = ["17-inch Dell TFT LCD Moniteur ÀÉcran Plat",
-                "Lampe à poser en métal vert cèdre h21cm",
-                "Modèle emblématique du défilé Printemps-Été 2018",
-                "Modèle emblématique du défilé Printemps-Été 2017"
-              ];
-*/
-include 'functions/useful.php';
 
-              $articles = array(
-                1 => array('nom' => 'l\'écran !',
-                           'prix' => 599,
-                           'url' => 'assets/ecran.jpg',
-                           'desc'=>'17-inch Dell TFT LCD Moniteur ÀÉcran Plat'),
-                2 => array('nom' => "Lampe",
-                           'prix' => 15,
-                           'url' => 'assets/lampe.png',
-                           'desc'=>"Lampe à poser en métal vert cèdre h21cm"),
-                3 => array('nom' => "La chaussure !  ",
-                           'prix' => 75,
-                           'url' => 'assets/shoes.jpg',
-                           'desc'=>"Modèle emblématique du défilé Printemps-Été 2018"),
-                4 => array ('nom' => "Chaussure ",
-                            'prix' => 90,
-                            'url' => 'assets/shoes.jpg',
-                            'desc'=>"Modèle emblématique du défilé Printemps-Été 2017")
-                 );
+include 'functions/useful.php';
+$articles = generateCatalogue();
 
 
 ?>
@@ -59,7 +33,7 @@ include 'functions/useful.php';
                         <a class="nav-link" href="index.php">Home </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="articles.php">Articles<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="catalogue.php">Catalogue<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"></a>
@@ -70,8 +44,13 @@ include 'functions/useful.php';
         </nav>
     </header>
     <main>
-    
+
+        <div class="container-fluid">
+            <?php include 'header.php';  ?>
+        </div>
         <div class="container">
+
+
             <div class="row">
                 <h1 class="ml-5">Articles</h1>
             </div>
@@ -92,6 +71,7 @@ include 'functions/useful.php';
                             <p class="card-text"><?=  $value['desc'] ?></p>
                             <div class="card-footer d-flex justify-content-center bg-white">
                                 <a href="#" class="btn btn-primary"><?= $value['prix'] ."  " . MajDevise("euros") ?></a>
+                                <a href="article.php?id=<?=$value['id']?>" class="btn btn-secondary ml-1">visualiser le détail</a>
                             </div>
 
                         </div>
