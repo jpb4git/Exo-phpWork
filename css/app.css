@@ -6,9 +6,9 @@ body{
     background-color: rgb(246, 246, 246);
 }
 .bandeau{
-    background-image: url("https://www.nginx.com/wp-content/uploads/2019/01/nginx.com-homepage-Controller-2019Q1-bg-1366x600-min.jpg"); 
-    min-height:30em; 
-    
+    background-image: url("../assets/green-bg.jpg");
+    min-height:39em;
+    background-size: cover;
 }
 
 .ul-features{
@@ -55,4 +55,14 @@ min-height: 17em;
 }
 .infoBtn{
     width: 300px;
+}
+.row-footer{
+    background: none !important;
+}
+footer{
+    background-image: url("../assets/black-bg.png");
+    background-color: #222120;
+    z-index: 90;
+    min-height: 293px;
+    position: relative;
 }

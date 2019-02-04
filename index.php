@@ -114,6 +114,20 @@
     </div>
 </main>
 <footer>
+    <div class="container">
+        <div class="row row-footer d-flex justify-content-center align-items-stretch">
+
+            <div class="col-md-6 d-flex justify-content-center mt-4">
+                <a class="btn btn-warning" href="">Essayez gratuitement notre site</a>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center mt-4">
+                <a class="btn btn-warning" href="">Posez nous vos Questions</a>
+            </div>
+
+        </div>
+    </div>
+
+
 
 </footer>
 
