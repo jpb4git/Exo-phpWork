@@ -29,6 +29,12 @@ height : 25%;
 
 }
 
+img .art-img-px{
+    border : 1px solid red;
+    width : 45px!important;
+    height : 45px!important;
+
+}
 .card{
 
     min-height : 22em; 
@@ -65,4 +71,32 @@ footer{
     z-index: 90;
     min-height: 293px;
     position: relative;
+}
+.panier-row{
+    display:block!important;
+}
+.btn-secondary {
+    background-color: beige!important;
+    color : black!important;
+    border :1px solid beige!important;
+}
+.btn-secondary:hover {
+    background-color: black!important;
+    color : white!important;
+    border :1px solid beige!important;
+}
+.btn-warning {
+    background-color: beige!important;
+    color : black!important;
+    border :1px solid beige!important;
+}
+.btn-warning:hover {
+    background-color: black!important;
+    color : white!important;
+    border :1px solid black!important;
+}
+.bg-primary {
+    background-color: beige!important;
+    color : black!important;
+    border :1px solid beige!important;
 }

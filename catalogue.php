@@ -70,7 +70,7 @@ $articles = generateCatalogue();
                         <div class="card-body">
                             <h5 class="card-title"><?= $value['nom'] ?></h5>
                             <p class="card-text"><?= $value['desc'] ?>
-                                <span class="d-flex justify-content-end bg-primary text-white p-3"><?= $value['prix'] . "  " . MajDevise("euros") ?></span>
+                                <span class="d-flex justify-content-center bg-primary text-white p-3"><?= $value['prix'] . "  " . MajDevise("euros") ?></span>
                             </p>
                             <div class="card-footer d-flex justify-content-center bg-white">
                                 <a href="article.php?id=<?= $value['id'] ?>" class="btn btn-warning ml-1 p-3 d-flex justify-content-center align-items-center">
@@ -78,6 +78,7 @@ $articles = generateCatalogue();
                                     ajouter au panier
                                 </a>
                                 <a href="article.php?id=<?= $value['id'] ?>" class="btn btn-secondary ml-1 p-3">visualiser le détail</a>
+
                             </div>
 
                         </div>

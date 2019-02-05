@@ -60,14 +60,14 @@ $commentaires = getCommentaires();
 
 
         <div class="row">
-            <h1 class="p-3 mt-3 mb-3 mr-1 ml-1 badge badge-success w-100"><?= $art['nom'] ?></span></h1>
+            <h1 class="p-3 mt-3 mb-3 mr-1 ml-1 badge  w-100"><?= $art['nom'] ?></span></h1>
         </div>
         <div class="row">
 
             <div class="col-sm-12 ">
                 <div class="card">
                     <div class="card-header d-flex justify-content-center bg-white">
-                        <img src="<?php echo $art['url']; ?>" class="art-img img-fluid card-img-top" alt="...">
+                        <img src="<?php echo $art['url']; ?>" class="art-img img-fluid w-25 card-img-top" alt="...">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title"><?= $art['nom'] ?></h5>

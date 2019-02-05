@@ -41,7 +41,7 @@
         <div class="row bandeau">
             <div class="col-lg-2 ml-4 mt-5 "></div>
             <div class="col-lg-4 ml-4 mt-5 ">
-                <img class="img-fluid " src="assets/intro.png" alt="">
+                <img class="img-fluid w-75" src="assets/icon-hub-yellow.svg" alt="">
             </div>
             <div class="col-lg-4  mt-5 ml-5">
                 <h1 class="text-white mt-2">ngShop</h1>
