@@ -112,6 +112,25 @@
             </div>
         </div>
     </div>
+    <!-- modern application  -->
+    <div class="container-fluid">
+        <div class="row modern">
+            <div class="col-md-12">
+
+            </div>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>
+
+    </div>
+
 </main>
 <footer>
     <div class="container">

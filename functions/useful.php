@@ -50,34 +50,64 @@ function generateCatalogue()
             'prix' => 599,
             'url' => 'assets/ecran.jpg',
             'desc' => '17-inch Dell TFT LCD Moniteur ÀÉcran Plat',
-            'descFull' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium repellat soluta pariatur modi suscipit obcaecati ducimus dolorem accusamus quasi minus, officia incidunt sit vitae asperiores facilis est vero? In.'),
+            'descFull' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium repellat soluta pariatur modi suscipit obcaecati ducimus dolorem accusamus quasi minus, officia incidunt sit vitae asperiores facilis est vero? In.',
+            'qts' => '1'),
         array(
             'id' => "2",
             'nom' => "Lampe",
             'prix' => 15,
             'url' => 'assets/lampe.png',
             'desc' => "Lampe à poser en métal vert cèdre h21cm",
-            'descFull' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium repellat soluta pariatur modi suscipit obcaecati ducimus dolorem accusamus quasi minus, officia incidunt sit vitae asperiores facilis est vero? In.'),
+            'descFull' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium repellat soluta pariatur modi suscipit obcaecati ducimus dolorem accusamus quasi minus, officia incidunt sit vitae asperiores facilis est vero? In.',
+            'qts' => '1'),
         array(
             'id' => "3",
             'nom' => "La chaussure !  ",
             'prix' => 75,
             'url' => 'assets/shoes.jpg',
             'desc' => "Modèle emblématique du défilé Printemps-Été 2018",
-            'descFull' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium repellat soluta pariatur modi suscipit obcaecati ducimus dolorem accusamus quasi minus, officia incidunt sit vitae asperiores facilis est vero? In.'),
+            'descFull' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium repellat soluta pariatur modi suscipit obcaecati ducimus dolorem accusamus quasi minus, officia incidunt sit vitae asperiores facilis est vero? In.',
+            'qts' => '1'),
         array(
             'id' => "4",
             'nom' => "Chaussure ",
             'prix' => 90,
             'url' => 'assets/shoes.jpg',
             'desc' => "Modèle emblématique du défilé Printemps-Été 2017",
-            'descFull' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium repellat soluta pariatur modi suscipit obcaecati ducimus dolorem accusamus quasi minus, officia incidunt sit vitae asperiores facilis est vero? In.'),
+            'descFull' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium repellat soluta pariatur modi suscipit obcaecati ducimus dolorem accusamus quasi minus, officia incidunt sit vitae asperiores facilis est vero? In.',
+            'qts' => '1'),
     );
 
     return $articles;
 
 }
 
+/**
+ * @param $id  id de l'article selectionné
+ *
+ *
+ */
+function getcommentairesByArt($id){
+    $arr1 = [];
+    $coms = getCommentaires();
+
+    if (isExistArticle($id)) {
+
+         foreach ($coms as $value){
+             if (intval($value['id']) == intval($id)) {
+                 $arr1 = array('id' => $value['id'],
+                     'name' => $value['name'],
+                     'url_avatar' => $value['url_avatar'],
+                     'commentaire' => $value['commentaire'],
+                     'stars' => $value['stars']);
+
+             }
+
+         }
+
+    }
+    return $arr1;
+}
 /**
  *
  * @return array     la liste des articles
@@ -144,4 +174,33 @@ function isExistArticle($id)
     }
     return false;
 
+}
+
+/**
+ * function Setcolor coté ligne de commande
+ * @param $color
+ * @return string
+ */
+function SetColor($color){
+    switch ($color){
+        case "white" :
+            return "\e[1;37m";
+        case "red" :
+         return "\e[0;31m";
+
+        break;
+        case "green" :
+            return "\e[0;32m";
+            break;
+        case "yellow" :
+            return "\e[1;33m";
+            break;
+        case "blue" :
+            return "\e[0;34m";
+            break;
+        case "magenta" :
+            return "\e[0;35m";
+            break;
+    }
+    return "\e[1;37";
 }
