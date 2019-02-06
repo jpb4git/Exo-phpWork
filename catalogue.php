@@ -37,6 +37,9 @@ $articles = generateCatalogue();
                     <a class="nav-link" href="catalogue.php">Catalogue<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="catalogue2.php">Panier</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#"></a>
                 </li>
 

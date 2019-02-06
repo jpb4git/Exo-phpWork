@@ -1,24 +1,9 @@
 <?php
 session_start();
+
 var_dump($_SESSION);
+
 include 'functions/useful.php';
-
-var_dump($_POST);
-
-
-if (isset($_POST) && !empty($_POST)) {
-        echo 'passe' ;
-        $myPost = $_POST;
-        foreach ($_POST as $key => $value){
-            $_SESSION[$key] = ['qts' => 1];
-        }
-}
-
-
-
-var_dump($_SESSION);
-
-
 // recuperer la listes des articles au format Array;
 $articles = generateCatalogue();
 
@@ -71,55 +56,54 @@ $articles = generateCatalogue();
         <?php include 'header.php'; ?>
     </div>
 
-
-    <?php
-
-    if (isset($myPost) && !empty($myPost)) {
-
-
-        ?>
         <div class="container">
-            <form action="panierProcess.php" method="post">
-                <div class="row">
-                    <h1 class="badge  w-100 p-3 m-3">Article(s) ajouté(s)</h1>
-                </div>
-                <div class="row">
-
+            <div class="row ">
+                <h1 class="badge  w-100 p-3 m-3">Articles</h1>
+            </div>
+            <div class="row panier-row">
+                <form action="panier.php" method="post">
                     <?php
-                    $total = 0;
-
                     // parcourir les articles dans le catalogue
-                    foreach ($myPost as $key => $value) {
-                        $k = $key - 1 ;
-                        ?>
-                        <div class="wcolMax col-md-12 d-flex flex-inline justify-content-between align-items-center">
-                            <img src="<?php echo $articles[$k]['url']; ?> " class="art-img-px" width="45" height="45" alt="...">
-                            <?= $articles[$k]['nom'] ?>
-                            <p class="p-3 m-3">
-                                <?= $articles[$key - 1]['desc'] ?>
-                                <input type="text" name="<?php echo $articles[$k]['id'] ?>" id="<?php echo $articles[$k]['id'] ?>" value="1">
-                                <span class="bg-primary text-white p-3"><?= $articles[$k]['prix'] . "  " . MajDevise("euros") ?></span>
+                    foreach ($articles as $value) { ?>
+                        <div class="col-sm-12 ">
+                            <div class="div row">
+                                <div class="col-md-2 mb-5">
+                                    <img src="<?php echo $value['url']; ?> " class="art-img-px" width="45" height="45" alt="...">
 
-                            </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <?= $value['nom'] ?>
+                                </div>
+
+
+                                <div class="col-md-5 d-flex justify-content-end">
+                                    <p class=""><?= $value['desc'] ?>
+                                        <span class="bg-primary text-white p-3"><?= $value['prix'] . "  " . MajDevise("euros") ?></span>
+                                    </p>
+                                </div>
+                                <div class="col-md-2">
+                                    <label>Add </label>
+                                    <input class="" type="checkbox" id="<?php echo $value['id']; ?>"
+                                           name="<?php echo $value['id']; ?>">
+                                </div>
+
+
+                            </div>
 
                         </div>
                         <?php
                     }
                     ?>
-                    <div class="col-sm-12 d-flex flex-row justify-content-end align-items-center p-3 m-0">
-                        <?php echo "Total : " . totalPanier($myPost); ?>
-                    </div>
-                    <div class="col-sm-12 d-flex flex-row justify-content-end align-items-center p-3 m-0">
-                        <input type="submit" name="Recalculer" id="Recalculer" value="Recalculer" class="btn btn-outline-secondary">
+
+
+                    <div class="col-sm-12 d-flex justify-content-center m-5">
+                        <input class="btn btn-secondary" type="submit" value="Envoyer le formulaire">
                     </div>
 
-                </div>
-            </form>
+
+                </form>
+            </div>
         </div>
-        <?php
-    }
-
-    ?>
 </main>
 <footer>
 

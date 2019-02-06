@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+//session_destroy();
+//$_SESSION = array();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -27,6 +33,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="catalogue.php">Catalogue</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="catalogue2.php">Panier</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"></a>

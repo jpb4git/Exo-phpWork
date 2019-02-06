@@ -9,6 +9,35 @@ function MajDevise($devise)
     return ucfirst($devise);
 }
 
+function RecalculatePanier($arr)
+{
+    $total = 0;
+
+    $articles = generateCatalogue();
+    foreach ($arr as $key => $value) {
+        if (is_numeric($value)) {
+            $total += intval($articles[$key - 1]['prix']) * intval($value);
+        }
+    }
+    return $total . " Euros";
+
+
+}
+
+/**
+ * @param $arr
+ * @return string
+ */
+function totalPanier($arr)
+{
+    $total = 0;
+    $articles = generateCatalogue();
+    foreach ($arr as $key => $value) {
+        $total += $articles[$key - 1]['prix'];
+    }
+    return $total . " Euros";
+}
+
 /**
  *  renvoie les informations d'un article selectionné
  *
@@ -28,13 +57,39 @@ function getArticleInfo($id)
         }
 
     } else {
-        $arr1 = array('id' => "0", 'nom' => "article inconnu", 'prix' => '', 'descFull' => "il semble que vous tentez de visualiser un article inconnu." , 'desc' => 'Article inconnu', 'url' => 'assets/notFound.svg');
+        $arr1 = array('id' => "0", 'nom' => "article inconnu", 'prix' => '', 'descFull' => "il semble que vous tentez de visualiser un article inconnu.", 'desc' => 'Article inconnu', 'url' => 'assets/notFound.svg');
     }
 
     return $arr1;
 
 }
+/*
+function generateSelectedArticle($post)
+{
+    echo 'generate selected Article ' . '\n';
+    echo "<pre>";
+    //var_dump($post);
+    echo "</pre>";
+    //die();
+    $art1 = [];
+    $articles = generateCatalogue();
+    if (isExistArticle($id)) {
+        for ($i = 0; $i < count($articles); $i++) {
+            // si nous sommes sur l'article traité
+            if ($articles[$i]['id'] == $id) {
+                $arr1 = array('id' => $articles[$i]['id'], 'nom' => $articles[$i]['nom'], 'prix' => $articles[$i]['prix'], 'descFull' => $articles[$i]['descFull'], 'desc' => $articles[$i]['desc'], 'url' => $articles[$i]['url']);
+            }
+        }
 
+    } else {
+        $arr1 = array('id' => "0", 'nom' => "article inconnu", 'prix' => '', 'descFull' => "il semble que vous tentez de visualiser un article inconnu.", 'desc' => 'Article inconnu', 'url' => 'assets/notFound.svg');
+    }
+
+    return $arr1;
+
+
+}
+*/
 /**
  *  generateCatalogue  fonction qui renvoie le catalogue des articles
  *
@@ -87,27 +142,29 @@ function generateCatalogue()
  *
  *
  */
-function getcommentairesByArt($id){
+function getcommentairesByArt($id)
+{
     $arr1 = [];
     $coms = getCommentaires();
 
     if (isExistArticle($id)) {
 
-         foreach ($coms as $value){
-             if (intval($value['id']) == intval($id)) {
-                 $arr1 = array('id' => $value['id'],
-                     'name' => $value['name'],
-                     'url_avatar' => $value['url_avatar'],
-                     'commentaire' => $value['commentaire'],
-                     'stars' => $value['stars']);
+        foreach ($coms as $value) {
+            if (intval($value['id']) == intval($id)) {
+                $arr1 = array('id' => $value['id'],
+                    'name' => $value['name'],
+                    'url_avatar' => $value['url_avatar'],
+                    'commentaire' => $value['commentaire'],
+                    'stars' => $value['stars']);
 
-             }
+            }
 
-         }
+        }
 
     }
     return $arr1;
 }
+
 /**
  *
  * @return array     la liste des articles
@@ -181,14 +238,15 @@ function isExistArticle($id)
  * @param $color
  * @return string
  */
-function SetColor($color){
-    switch ($color){
+function SetColor($color)
+{
+    switch ($color) {
         case "white" :
             return "\e[1;37m";
         case "red" :
-         return "\e[0;31m";
+            return "\e[0;31m";
 
-        break;
+            break;
         case "green" :
             return "\e[0;32m";
             break;

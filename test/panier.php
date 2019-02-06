@@ -1,22 +1,27 @@
 <?php
 session_start();
-var_dump($_SESSION);
-include 'functions/useful.php';
-
-var_dump($_POST);
+include '../functions/useful.php';
 
 
-if (isset($_POST) && !empty($_POST)) {
-        echo 'passe' ;
-        $myPost = $_POST;
-        foreach ($_POST as $key => $value){
-            $_SESSION[$key] = ['qts' => 1];
-        }
+$mypost ="";
+if (isset($_POST)){
+    $mypost = $_POST;
+    //$i est l'id
+    foreach ($mypost as $key => $value){
+       // echo $key . ' ' . $value ;
+        $_SESSION['article'][] = $key;
+        $_SESSION['Qts'][] = 1 ;
+        //$_SESSION['panier']['article']['Qts'][] = 1;
+    }
+
+      for ($i = 0 ; $i < count($_SESSION['article']);$i++){
+          echo $_SESSION['article'][$i] . '  ---  ' .$_SESSION['Qts'][$i] . ' ||  ';
+
+      }
+    //var_dump($_SESSION);
+    echo $_SESSION = null;
 }
 
-
-
-var_dump($_SESSION);
 
 
 // recuperer la listes des articles au format Array;
@@ -35,7 +40,7 @@ $articles = generateCatalogue();
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="../css/app.css">
 </head>
 
 <body>
@@ -74,7 +79,7 @@ $articles = generateCatalogue();
 
     <?php
 
-    if (isset($myPost) && !empty($myPost)) {
+
 
 
         ?>
@@ -87,39 +92,34 @@ $articles = generateCatalogue();
 
                     <?php
                     $total = 0;
-
-                    // parcourir les articles dans le catalogue
-                    foreach ($myPost as $key => $value) {
-                        $k = $key - 1 ;
-                        ?>
-                        <div class="wcolMax col-md-12 d-flex flex-inline justify-content-between align-items-center">
-                            <img src="<?php echo $articles[$k]['url']; ?> " class="art-img-px" width="45" height="45" alt="...">
-                            <?= $articles[$k]['nom'] ?>
-                            <p class="p-3 m-3">
-                                <?= $articles[$key - 1]['desc'] ?>
-                                <input type="text" name="<?php echo $articles[$k]['id'] ?>" id="<?php echo $articles[$k]['id'] ?>" value="1">
-                                <span class="bg-primary text-white p-3"><?= $articles[$k]['prix'] . "  " . MajDevise("euros") ?></span>
-
-                            </p>
-
-                        </div>
-                        <?php
-                    }
+                    foreach ($_SESSION as $k => $value){
                     ?>
+
+                    <div class="wcolMax col-md-12 d-flex flex-inline justify-content-between align-items-center">
+                        <img src="<?php echo $articles[$k]['url']; ?> " class="art-img-px" width="45" height="45" alt="...">
+                        <?= $articles[$k]['nom'] ?>
+                        <p class="p-3 m-3">
+                            <?= $articles[$key - 1]['desc'] ?>
+                            <input type="text" name="<?php echo $articles[$k]['id'] ?>" id="<?php echo $articles[$k]['id'] ?>" value="1">
+                            <span class="bg-primary text-white p-3"><?= $articles[$k]['prix'] . "  " . MajDevise("euros") ?></span>
+
+                        </p>
+
+                    </div>
+
+
+
                     <div class="col-sm-12 d-flex flex-row justify-content-end align-items-center p-3 m-0">
                         <?php echo "Total : " . totalPanier($myPost); ?>
                     </div>
                     <div class="col-sm-12 d-flex flex-row justify-content-end align-items-center p-3 m-0">
                         <input type="submit" name="Recalculer" id="Recalculer" value="Recalculer" class="btn btn-outline-secondary">
                     </div>
-
+            <?PHP } ?>
                 </div>
             </form>
         </div>
-        <?php
-    }
 
-    ?>
 </main>
 <footer>
 
@@ -138,3 +138,4 @@ $articles = generateCatalogue();
 </body>
 
 </html>
+*/

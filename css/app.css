@@ -65,6 +65,9 @@ min-height: 17em;
 .row-footer{
     background: none !important;
 }
+.wcolMax{
+    width : 100%!important;
+}
 footer{
     background-image: url("../assets/black-bg.png");
     background-color: #222120;
@@ -99,4 +102,10 @@ footer{
     background-color: beige!important;
     color : black!important;
     border :1px solid beige!important;
+}
+
+ div .error{
+
+    background-color: brown;
+    color :white ;
 }

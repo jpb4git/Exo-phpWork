@@ -1,23 +1,33 @@
 <?php
 session_start();
-var_dump($_SESSION);
 include 'functions/useful.php';
 
+// MAJ QTS
+$msgError = "";
 var_dump($_POST);
 
 
+
+
 if (isset($_POST) && !empty($_POST)) {
-        echo 'passe' ;
-        $myPost = $_POST;
-        foreach ($_POST as $key => $value){
-            $_SESSION[$key] = ['qts' => 1];
+    //var_dump($_POST);
+    foreach ($_POST as $key => $value) {
+        if (is_numeric($key)) {
+            if ($value != "delete" && is_numeric($value) ) {
+                //$_SESSION['Qts'][$key] = $value;
+                //$_SESSION['QtsMemory'][$key] = $value;
+                //echo "> id :" . $key . ' - Qts : ' . $value  . ' - QtsMemo : ' . $value .' || ';
+            }else{
+                //
+                //echo "> id :" . $key . ' - Qts : ' . $value  . ' - QtsMemo : ' . $_SESSION['Qts'][$key] .' || ';
+                //$_SESSION['Qts'][$key] = $_SESSION['QtsMemory'][$key];
+                $msgError = "Veuillez entrer une valeur numérique Positive";
+            }
         }
+    }
 }
-
-
-
+echo '<br>';
 var_dump($_SESSION);
-
 
 // recuperer la listes des articles au format Array;
 $articles = generateCatalogue();
@@ -82,6 +92,9 @@ $articles = generateCatalogue();
             <form action="panierProcess.php" method="post">
                 <div class="row">
                     <h1 class="badge  w-100 p-3 m-3">Article(s) ajouté(s)</h1>
+                    <?php if (!empty($msgError)) { ?>
+                        <span class="w-100 p-3 bg-danger text-white text-center"><?php echo $msgError ?></span>
+                    <?php } ?>
                 </div>
                 <div class="row">
 
@@ -90,27 +103,44 @@ $articles = generateCatalogue();
 
                     // parcourir les articles dans le catalogue
                     foreach ($myPost as $key => $value) {
-                        $k = $key - 1 ;
-                        ?>
-                        <div class="wcolMax col-md-12 d-flex flex-inline justify-content-between align-items-center">
-                            <img src="<?php echo $articles[$k]['url']; ?> " class="art-img-px" width="45" height="45" alt="...">
-                            <?= $articles[$k]['nom'] ?>
-                            <p class="p-3 m-3">
-                                <?= $articles[$key - 1]['desc'] ?>
-                                <input type="text" name="<?php echo $articles[$k]['id'] ?>" id="<?php echo $articles[$k]['id'] ?>" value="1">
-                                <span class="bg-primary text-white p-3"><?= $articles[$k]['prix'] . "  " . MajDevise("euros") ?></span>
+                        if (is_numeric($key)) {
+                            $k = $key-1;
 
-                            </p>
 
-                        </div>
-                        <?php
+                            ?>
+                            <div class="col-md-12 d-flex flex-inline justify-content-between align-items-center">
+
+                                <img src="<?php echo $articles[$k]['url']; ?> " class="art-img-px" width="45"
+                                     height="45" alt="...">
+
+
+                                <?= $articles[$k]['nom'] ?>
+
+                                <p class="p-3 m-3">
+                                    <?= $articles[$k]['desc'] ?>
+                                    <!-- QTS   -->
+                                    <input type="text" name="<?php echo $articles[$k]['id'] ?>"
+                                           id="<?php echo $articles[$k]['id'] ?>" value="<?php echo rtrim($value); ?>">
+
+                                    <span class="bg-primary text-white p-3"><?= $articles[$k]['prix'] . "  " . MajDevise("euros") ?></span>
+                                    <!-- DELETE   -->
+                                    <input type="submit" name="<?php echo $articles[$k]['id'] ?>"
+                                           id="<?php echo $articles[$k]['id'] ?>" value="delete"
+                                           class="btn btn-outline-secondary">
+                                </p>
+
+                            </div>
+                            <?php
+                        }
                     }
                     ?>
+
                     <div class="col-sm-12 d-flex flex-row justify-content-end align-items-center p-3 m-0">
-                        <?php echo "Total : " . totalPanier($myPost); ?>
+                        <?php echo "Total : " . RecalculatePanier($myPost); ?>
                     </div>
                     <div class="col-sm-12 d-flex flex-row justify-content-end align-items-center p-3 m-0">
-                        <input type="submit" name="Recalculer" id="Recalculer" value="Recalculer" class="btn btn-outline-secondary">
+                        <input type="submit" name="Recalculer" id="Recalculer" value="Recalculer"
+                               class="btn btn-outline-secondary">
                     </div>
 
                 </div>
